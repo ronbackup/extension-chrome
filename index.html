@@ -1,0 +1,143 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="icons/icon.webp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UnpamSmart Pilot</title>
+    <style>
+        .rounded {
+            border-radius: 1rem
+        }
+        
+        .nav-pills .nav-link {
+            color: #555
+        }
+        
+        .nav-pills .nav-link.active {
+            color: white
+        }
+        
+        input[type="radio"] {
+            margin-right: 5px
+        }
+        
+        .bold {
+            font-weight: bold
+        }
+        
+        .card-header {
+            width: 100% !important;
+            padding: 8px 8px 8px 8px !important;
+        }
+    </style>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <script src="js/cdn/jquery.min.js"></script>
+    <script src="js/cdn/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div id="formLogin" class="hidden" style="width: 350px; margin-top: 0%;">
+        
+        <div class="input-container-fordis" style="width: 350px; margin-top: 0%; height: 110%;">
+            <div style="text-align: center; margin-bottom: 20px;">
+                <img src="icons/icon.webp" alt="Logo" style="width: 100px; height: auto; margin-bottom: 10px;">
+                <div style="margin-top: 10px; font-size: 12px; color: #555;">
+                    <span style="border-top: 2px solid #D32F2F; width: 50px; display: inline-block; margin: 0 5px;"></span>
+                    Welcome To
+                    <span style="border-top: 2px solid #D32F2F; width: 50px; display: inline-block; margin: 0 5px;"></span>
+                </div>
+                <div style="font-family: 'Poppins', sans-serif; font-size: 24px; color: #D32F2F; font-weight: bold; text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);">
+                    UNPAM
+                    <span style="font-size: 16px; color: #FFFFFF; background-color: #D32F2F; padding: 2px 5px; margin-left: 5px; border-radius: 3px;">SMART PILOT</span>
+                </div>
+            </div>
+                 
+            <input type="text" id="inputNim" class="form-control input-box-fordis" placeholder="Masukkan NIM" required/>
+            <button id="btnSave" class="btn-save btn-fordis login-extension">Masuk</button>
+        </div>
+    </div>
+    <div id="formExtension" class="hidden">
+        <div class="card ">
+            <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; border-bottom: 4px solid #D32F2F;">
+                <div style="font-family: 'Poppins', sans-serif; color: #D32F2F; font-weight: bold; text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3); display: flex; align-items: center; margin-top: 10px; margin-bottom: 10px;">
+                    <span>UNPAM</span>
+                    <!-- <img src="icons/icon.webp" style="width: 50px; height: 50px; margin: 0 5px;" /> -->
+                    <span style="font-size: 100%; color: #FFFFFF; background-color: #D32F2F; padding: 2px 5px; margin-left: 5px; border-radius: 3px;">SMART PILOT</span>
+                </div>
+            </div>
+            
+            
+            <div class="card-header">
+                <div>
+                    <ul role="tablist" class="nav bg-light nav-pills rounded nav-fill mb-3">
+                        <li class="nav-item">
+                            <a data-toggle="pill" href="#navtab-mentari" class="nav-link">
+                                <img src="icons/mentari.png" alt="Mentari" class="icon-navtab"> MENTARI
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a data-toggle="pill" href="#navtab-myunpam" class="nav-link">
+                                <img src="icons/unpam.png" alt="MYUNPAM" class="icon-navtab"> MYUNPAM
+                            </a>
+                        </li>
+                        <li class="nav-item logout-extension">
+                            <a data-toggle="pill" href="#navtab-logout" class="nav-link">
+                                <i class="fas fa-power-off" style="color: red;"></i> 
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tab-content">
+                    <!-- NAV-TAB MENTARI INFO-->
+                    <div id="navtab-mentari" class="tab-pane fade show active pt-3">
+                        <div class="input-container-fordis">
+                            <button id="runQuizMentari" class="btn-fordis"><i class="fas fa-graduation-cap"></i> Quiz Mentari </button>
+                            <button id="runKuisionerMentari" class="btn-fordis"><i class="fas fa-poll"></i> Kuisioner Mentari </button>
+                        </div>
+
+                        <!-- <form action=""> -->
+                            <div class="input-container-fordis">
+                                <div class="form-group">
+                                    <label for="cardNumber" class="ffsu"><h6>Forum Diskusi Mentari</h6></label>
+                                    <div class="input-group">
+                                        <input type="text" id="inputQuestionFordis" placeholder="Masukkan Pertanyaan Fordis" class="form-control input-box-fordis" required>
+                                        <div class="input-group-append" id="clearInputQuestionFordis" style="cursor: pointer;">
+                                            <span class="input-group-text text-muted"><i class="fas fa-trash mx-1"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="button-group-fordis">
+                                    <button id="btnSendQuestionFordis" class="btn-fordis btn-send-fordis"><i class="fas fa-paper-plane"></i> Kirim Pertanyaan</button>
+                                </div>
+                            </div>
+                        <!-- </form> -->
+                    </div>
+                    <!-- END NAV-TAB MENTARI INFO-->
+
+                    <!-- NAV-TAB MYUNPAM INFO -->
+                    <div id="navtab-myunpam" class="tab-pane fade pt-3">
+                        <div class="input-container-fordis">
+                            <button id="runKuisionerKhs" class="btn-fordis"><i class="fas fa-book"></i> Kuisioner KHS </button>
+                        </div>
+                    </div>
+                    <!-- END NAV-TAB MYUNPAM INFO -->
+
+                    <!-- NAV-TAB AI INFO -->
+                    <div id="navtab-logout" class="tab-pane fade pt-3">
+                        <div class="input-container-fordis">
+                            <p style="text-align: center;font-weight: 900;color: #007BFF;">KLIK BUTTON POWER TO LOGOUT!</p>
+                        </div>
+                    </div>
+                    <!-- END AI INFO-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/popup.js"></script>
+</body>
+
+</html>
